@@ -1,0 +1,17 @@
+<div class="wrapper">
+    <div *ngIf="showCourseComponent; else certificateListsExpansionContainer" class="cards">
+        <div matRipple [matRippleColor]="blue" *ngFor="let card of cards | keyvalue" (click)="loadcourses(card.key) " class="card">
+            <div style="margin:auto;text-align: center;">
+                <img src={{card.value.src}} alt="img " style="width: 40%; ">
+                <BR>
+                <b>{{card.key}}</b>
+            </div>
+            <BR> {{card.value.desc}}
+            <BR clear="left ">
+            <!-- <mat-icon (click)="loadcourses(card.key) ">picture_as_pdf</mat-icon> -->
+        </div>
+    </div>
+
+    <ng-template #certificateListsExpansionContainer>
+    </ng-template>
+</div>

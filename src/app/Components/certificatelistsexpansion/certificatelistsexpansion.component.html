@@ -1,0 +1,42 @@
+<div>
+    <h6 mat-dialog-title>
+        <span matBadgeColor="warn" [matBadge]="courselength" matBadgeOverlap="false">{{coursesData.name}}</span>
+    </h6>
+    <!-- <h6>
+        <mat-icon ></mat-icon>
+    </h6> -->
+</div>
+
+<mat-accordion class="example-headers-align">
+    <mat-expansion-panel [expanded]="step === i" (opened)="setStep(i)" hideToggle *ngFor="let course of coursesData.courses | keyvalue, let i = index,">
+        <mat-expansion-panel-header>
+            <mat-panel-title>
+                <div mat-card-avatar [ngStyle]="{'background-image': 'url(' + coursesData.img_src + ')','background-size': 'cover'}"></div>
+                <!-- {{i+1}} -->
+            </mat-panel-title>
+            <mat-panel-description>
+                {{course.key}}
+            </mat-panel-description>
+        </mat-expansion-panel-header>
+        <!-- decription goes here if any... -->
+        <!-- <div>
+            {{course.key}}
+        </div> -->
+        <mat-action-row class="actionrow">
+            <div>
+                <button mat-raised-button color="primary" (click)="openNewTab(course.value.c_link)">View Certificate</button>
+                <button *ngIf="course.value.s_link" mat-button (click)="openNewTab(course.value.s_link)">Visit course<img [src]="coursesData.img_src" style="width:30px"/></button>
+                <!-- <a target="_blank"><img src="{{coursesData.img_src}}" height="30px" /></a> -->
+            </div>
+            <div>
+                <button *ngIf="i!=0" mat-button color="warn" (click)="prevStep()">Previous</button>
+                <button *ngIf="i != courselength-1" mat-button color="primary" (click)="nextStep()">Next</button>
+                <button *ngIf="i == courselength-1" mat-button color="primary" (click)="nextStep()">End</button>
+            </div>
+        </mat-action-row>
+    </mat-expansion-panel>
+</mat-accordion>
+<div style="margin: 1%; float: right;">
+    <button mat-raised-button color='warn' (click)="goBack()">Walk Back</button>
+</div>
+<br>

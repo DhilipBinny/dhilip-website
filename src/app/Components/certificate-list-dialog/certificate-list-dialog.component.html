@@ -1,0 +1,33 @@
+<h6 mat-dialog-title>{{data.name}}</h6>
+<!-- <div mat-dialog-content>
+    <mat-list>
+        <mat-list-item matRipple *ngFor="let course of coursesData.course | keyvalue, let i = index" (click)='openNewTab(course.value)'>
+            <div mat-card-avatar [ngStyle]="{'background-image': 'url(' + data.img_src + ')','background-size': 'cover'}"></div>
+            <span>{{i+1}} - </span>
+            <span>{{course.key}}</span>
+            <mat-divider></mat-divider>
+        </mat-list-item>
+    </mat-list>
+</div> -->
+<mat-accordion class="example-headers-align">
+    <mat-expansion-panel [expanded]="step === i" (opened)="setStep(i)" hideToggle *ngFor="let course of coursesData.courses | keyvalue, let i = index,">
+        <mat-expansion-panel-header>
+            <mat-panel-title>
+                {{i+1}}
+            </mat-panel-title>
+            <mat-panel-description>
+                {{course.key}}
+            </mat-panel-description>
+        </mat-expansion-panel-header>
+        <button mat-button (click)="openNewTab(course.value)">View Certificate</button>
+
+        <mat-action-row>
+            <button *ngIf="i!=0" mat-button color="warn" (click)="prevStep()">Previous</button>
+            <button *ngIf="i != courselength-1" mat-button color="primary" (click)="nextStep()">Next</button>
+            <button *ngIf="i == courselength-1" mat-button color="primary" (click)="nextStep()">End</button>
+        </mat-action-row>
+    </mat-expansion-panel>
+</mat-accordion>
+<div mat-dialog-actions>
+    <button mat-button [mat-dialog-close]>Ok</button>
+</div>

@@ -1,1 +1,43 @@
 /* You can add global styles to this file, and also import other style files */
+
+@import "~@angular/material/prebuilt-themes/indigo-pink.css";
+
+/* @import "~@angular/material/prebuilt-themes/deeppurple-amber.css"; */
+
+@import '~bootstrap/dist/css/bootstrap.min.css';
+body {
+    height: 100%;
+}
+
+body {
+    margin: 0;
+    font-family: Roboto, "Helvetica Neue", sans-serif;
+}
+
+app-certificate-list-dialog>div.mat-dialog-content {
+    padding: 1%
+}
+
+
+/* carousel pre next buttons div */
+
+.ng2-custom-carousel-controls {
+    display: flex !important;
+    justify-content: space-around !important;
+    width: 50% !important;
+    padding: 1%;
+}
+
+
+/* carousel pre next buttons */
+
+.ng2-custom-carousel-controls button {
+    border: none;
+    color: black;
+    background: rgb(240, 240, 240);
+}
+
+.ng2-custom-carousel-controls button:hover {
+    background-color: #4c4c4c;
+    color: white;
+}

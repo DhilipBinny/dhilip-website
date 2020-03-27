@@ -1,0 +1,47 @@
+<div class="wrapper">
+    <div class="cards">
+        <div class="card">
+            <div>
+                <mat-card>
+                    <mat-card-header>
+                        <div mat-card-avatar class="namecard-header-image" style="background-image: url('assets/nus.jpg')"></div>
+                        <mat-card-title>DHILIP KUMAR</mat-card-title>
+                        <mat-card-subtitle>Self-directed and motivated problem solver</mat-card-subtitle>
+                    </mat-card-header>
+                    <img mat-card-image src="assets/binny2.jpg" alt=" NUS " />
+                </mat-card>
+            </div>
+        </div>
+        <div class="card">
+            <mat-list>
+                <mat-list-item>
+                    <h6>Things I do ..</h6>
+                </mat-list-item>
+                <mat-list-item *ngFor="let item of features_list">
+                    <mat-icon>label_important</mat-icon> {{item}}
+                    <mat-divider></mat-divider>
+                </mat-list-item>
+            </mat-list>
+        </div>
+    </div>
+
+    <div style="margin-top: 2%;">
+        <ng2-custom-carousel timing="400ms ease-in" [showControls]="true" [autoScroll]="2000" showNavigation="none" [slidesN]="4" [loop]="true" scrollDirection="left" [slidesMargin]="100">
+            <ng-container *ngFor="let item of features_list2 | keyvalue">
+                <ng-container *ng2CustomCarouselItem>
+                    <div class="ng2-custom-carousel-element">
+                        <!-- PLACE HERE YOUR SLIDE CONTENT -->
+                        <div>
+                            <p><b> {{item.key}}</b></p>
+                            <img src="{{item.value.img_src}}" height="40px" />
+                        </div>
+                        <div>
+                            <p>{{item.value.desc}}</p>
+                        </div>
+
+                    </div>
+                </ng-container>
+            </ng-container>
+        </ng2-custom-carousel>
+    </div>
+</div>

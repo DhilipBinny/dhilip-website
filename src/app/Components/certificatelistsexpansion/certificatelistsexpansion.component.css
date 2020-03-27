@@ -1,0 +1,5 @@
+.actionrow {
+    display: flex;
+    border: none !important;
+    justify-content: space-between;
+}

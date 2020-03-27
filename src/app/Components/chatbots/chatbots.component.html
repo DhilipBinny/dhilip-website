@@ -1,0 +1,29 @@
+<div class="wrapper">
+    <mat-list style="margin-top:1%">
+        <div *ngFor='let link of bots | keyvalue' style="padding: 1%;">
+            <mat-list-item>
+                <div>
+                    <h6>{{link.key}}</h6>
+                </div>
+            </mat-list-item>
+            <mat-list-item>
+                <ul>
+                    <li>
+                        <p>{{link.value.desc}}</p>
+                    </li>
+                </ul>
+            </mat-list-item>
+            <mat-list-item>
+                <div style="display: flex;justify-content: flex-end; width: 100%;">
+                    <button *ngIf="link.value.liveurl" color="primary" mat-raised-button (click)="openNewTab(link.value.liveurl)">Try me</button>
+                    <button *ngIf="link.value.giturl" mat-raised-button (click)="openNewTab(link.value.giturl)">
+                                <img src="assets/icons/github.png" height="30px" /></button>
+                    <button mat-raised-button (click)="openNewTab(link.value.url)">
+                            <img src="assets/icons/youtube.png" height="30px" />
+                        </button>
+                </div>
+            </mat-list-item>
+            <mat-divider></mat-divider>
+        </div>
+    </mat-list>
+</div>

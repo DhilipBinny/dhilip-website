@@ -1,0 +1,32 @@
+<div class="wrapper">
+    <div *ngIf="showProjectComponent; else ExpansionContainer" class="cards">
+        <div *ngFor="let card of cards | keyvalue" class="card" matRipple [matRippleColor]="primary">
+            <div style="margin:auto;text-align: center;">
+                <b>{{card.key}}</b>
+                <BR>
+                <img src={{card.value.src}} alt="img " style="width: 40%; ">
+            </div>
+            <!-- <BR> {{card.value.desc}}
+            <BR clear="left "> -->
+
+            <div style="display: flex; justify-content: space-between; width: 100%;">
+                <div>
+                    <button mat-button color="primary" *ngIf="card.value.liveurl" (click)="openNewTab(card.value.liveurl)">
+                        <!-- <mat-icon>play_arrow</mat-icon> -->
+                        Try Me
+                        <img  src="assets/icons/forward-button.png"  height="30px" />
+                    </button>
+
+                    <!-- <button *ngIf="card.value.liveurl" mat-raised-button (click)="openNewTab(card.value.liveurl)">Try Me</button> -->
+                </div>
+                <div>
+                    <img *ngIf="card.value.giturl" src="assets/icons/github.png" (click)="openNewTab(card.value.giturl)" height="30px" />
+                    <img *ngIf="card.value.giturl2" src="assets/icons/github.png" (click)="openNewTab(card.value.giturl2)" height="30px" />
+                    <img src="assets/icons/about.png" height="30px" />
+                </div>
+            </div>
+        </div>
+    </div>
+    <ng-template #ExpansionContainer>
+    </ng-template>
+</div>

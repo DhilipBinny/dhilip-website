@@ -1,0 +1,11 @@
+<div *ngIf="isfooter else isnormal">
+    <a *ngFor="let link of social_links | keyvalue" href={{link.value}} target="_blank" class="isfooter_footer_href">
+        <img src="{{link.key}}" height="30px" />
+    </a>
+</div>
+
+<ng-template #isnormal>
+    <a *ngFor="let link of social_links | keyvalue" href={{link.value}} target="_blank" class="footer_href">
+        <img src="{{link.key}}" height="40px" />
+    </a>
+</ng-template>

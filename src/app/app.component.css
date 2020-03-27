@@ -1,0 +1,48 @@
+.example-spacer {
+    flex: 1 1 auto;
+}
+
+.mat-sidenav-container {
+    min-height: 92vh !important;
+}
+
+a {
+    text-decoration: none;
+    white-space: normal;
+}
+
+button {
+    min-width: min-content;
+}
+
+.mat-toolbar {
+    /* background: #fff; */
+    /* height: 8vh; */
+}
+
+footer {
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    color: black;
+    background: white;
+    text-align: center;
+    height: 8vh;
+}
+
+.example-container {
+    background: #fff;
+}
+
+
+/* 
+mat-sidenav-container {
+    height: 100%;
+} */
+
+
+/* 
+mat-sidenav {
+    width: 20%
+} */
