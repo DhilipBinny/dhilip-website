@@ -1,6 +1,6 @@
 <div class="wrapper">
     <div *ngIf="showProjectComponent; else ExpansionContainer" class="cards">
-        <div *ngFor="let card of cards | keyvalue" class="card" matRipple [matRippleColor]="primary">
+        <div *ngFor="let card of cards | keyvalue" class="card" matRipple >
             <div style="margin:auto;text-align: center;">
                 <b>{{card.key}}</b>
                 <BR>
