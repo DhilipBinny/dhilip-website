@@ -55,10 +55,5 @@
     /* font-size: 50px; */
 }
 
-.ng2-custom-carousel-controls {
-    display: flex !important;
-    justify-content: space-around !important;
-    width: 50% !important;
-}
 
 ng2-custom-carousel>div>div>div>button {}

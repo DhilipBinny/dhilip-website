@@ -49,7 +49,7 @@ export class ProjectsComponent implements OnInit {
     "Task List":{
       "desc": "..",
       "src": "assets/images/tasklist.png",
-      "liveurl":"https://todolist.dhilip2k17.now.sh/",
+      "liveurl":"http://134.209.105.222:9081/",
       "giturl":"https://github.com/DhilipBinny/TaskList-Angulatr-Node-Mongo",
     },
     "Name Card Scanner":{
