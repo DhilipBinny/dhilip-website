@@ -30,7 +30,7 @@
         "bootstrap": "^4.4.1",
         "hammerjs": "^2.0.8",
         "ionicons": "^5.0.1",
-        "jquery": "^3.4.1",
+        "jquery": "^3.5.0",
         "ng2-custom-carousel": "0.0.19",
         "now": "^17.1.1",
         "rxjs": "~6.4.0",
