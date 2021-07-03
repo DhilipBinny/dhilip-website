@@ -11,8 +11,8 @@ export class HomeComponent implements OnInit {
   constructor() { }
   isfooter = false;
   ngOnInit() {
-    var typed = new Typed('.typed', {
-      strings: ["Designer.", "Developer.", "Freelancer."],
+    const typed = new Typed('.typed', {
+      strings: ['Designer.', 'Developer.', 'Freelancer.'],
       typeSpeed: 200,
       loop: true
   });

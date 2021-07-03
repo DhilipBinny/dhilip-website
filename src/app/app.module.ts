@@ -14,8 +14,8 @@ import { SociallinksComponent } from './Components/sociallinks/sociallinks.compo
 import { PdfloaderComponent } from './Components/pdfloader/pdfloader.component';
 import { CertificateListDialogComponent } from './Components/certificate-list-dialog/certificate-list-dialog.component';
 import { CertificatelistsexpansionComponent } from './Components/certificatelistsexpansion/certificatelistsexpansion.component';
-import { YoutubeplayerComponent } from './Components/youtubeplayer/youtubeplayer.component'
-import {ChatbotsComponent} from './Components/chatbots/chatbots.component'
+import { YoutubeplayerComponent } from './Components/youtubeplayer/youtubeplayer.component';
+import {ChatbotsComponent} from './Components/chatbots/chatbots.component';
 
 
 @NgModule({
@@ -39,10 +39,9 @@ import {ChatbotsComponent} from './Components/chatbots/chatbots.component'
     AppRoutingModule,
     MaterialModule,
     BrowserAnimationsModule,
-    
   ],
   providers: [],
   bootstrap: [AppComponent],
-  entryComponents:[CertificateListDialogComponent,CertificatelistsexpansionComponent]
+  entryComponents: [CertificateListDialogComponent, CertificatelistsexpansionComponent]
 })
 export class AppModule { }

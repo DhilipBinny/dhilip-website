@@ -32,17 +32,21 @@ footer {
 }
 
 .example-container {
-    background: #fff;
+    /*background: #fff;*/
+  /*background: rgb(238,174,202);*/
+  /*background: radial-gradient(circle, rgba(238,174,202,1) 0%, rgba(148,187,233,1) 100%);*/
+  /*background: #0C2340*/
+  background-image: linear-gradient(to top, #e6e9f0 0%, #eef1f5 100%);
 }
 
 
-/* 
+/*
 mat-sidenav-container {
     height: 100%;
 } */
 
 
-/* 
+/*
 mat-sidenav {
     width: 20%
 } */
