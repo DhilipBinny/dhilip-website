@@ -7,11 +7,11 @@
     <img src="assets/logo.png" height="90%" routerLink="/home" />
     <span class="example-spacer"></span>
     <div fxShow="true" fxHide.lt-md="true">
-        <button mat-button routerLink="/about">Wa</button>
         <button mat-button routerLink="/projects">Projects</button>
         <button mat-button routerLink="/certificates">Certification</button>
 <!--        <button mat-button routerLink="/chatbots">Chatbots</button>-->
         <button mat-button [matMenuTriggerFor]="menuresume">Resume</button>
+      <button mat-button routerLink="/about">Know more about me..</button>
         <button class="menu_btn" mat-button mat-icon-button [matMenuTriggerFor]="menu">
             <mat-icon>menu</mat-icon>
         </button>
@@ -19,6 +19,7 @@
 </mat-toolbar>
 
 <mat-sidenav-container fxFlexFill class="example-container">
+  <div class="css-jija50" style="transform: translateX(-60%);"></div>
     <mat-sidenav style="width: 30%;" color="primary" #sidenav fxLayout="column" mode="over" opened="false" fxHide.gt-sm="true">
         <div fxLayout="column">
             <button mat-button (click)="sidenav.toggle()" routerLink="/about">About</button>

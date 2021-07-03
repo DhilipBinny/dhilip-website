@@ -15,9 +15,23 @@ button {
     min-width: min-content;
 }
 
+
 .mat-toolbar {
     /* background: #fff; */
     /* height: 8vh; */
+  /*background:url('https://s3-us-west-2.amazonaws.com/webgradients.com/img/other/bg-banner@2x.jpg') no-repeat 50% / cover*/
+  display: flex;
+  white-space: nowrap;
+  overflow: hidden;
+  /*background-image: linear-gradient(to bottom, rgb(237, 237, 237), rgb(222, 222, 222));*/
+  /*background-image: radial-gradient( circle farthest-corner at 16.5% 28.1%,  rgba(15,27,49,1) 0%, rgba(0,112,218,1) 90% );*/
+  background: linear-gradient(to bottom, #D5DEE7 0%, #E8EBF2 50%, #E2E7ED 100%), linear-gradient(to bottom, rgba(0,0,0,0.02) 50%, rgba(255,255,255,0.02) 61%, rgba(0,0,0,0.02) 73%), linear-gradient(33deg, rgba(255,255,255,0.20) 0%, rgba(0,0,0,0.20) 100%);
+  background-blend-mode: normal,color-burn;
+  box-shadow: inset rgba(255, 255, 255, 0.5) 0 1px 1px;
+  outline: none;
+  padding-top: 3px;
+  padding-bottom: 3px;
+  /*height: 50px;*/
 }
 
 footer {
@@ -36,7 +50,23 @@ footer {
   /*background: rgb(238,174,202);*/
   /*background: radial-gradient(circle, rgba(238,174,202,1) 0%, rgba(148,187,233,1) 100%);*/
   /*background: #0C2340*/
-  background-image: linear-gradient(to top, #e6e9f0 0%, #eef1f5 100%);
+  /*background-image: linear-gradient(to top, #e6e9f0 0%, #eef1f5 100%);*/
+  /*background-image: radial-gradient( circle farthest-corner at 1.3% 2.8%,  rgba(239,249,249,1) 0%, rgba(182,199,226,1) 100.2% );*/
+  /*background-image: linear-gradient(to top, #dfe9f3 0%, white 100%);*/
+  background-color: rgb(244, 246, 248);
+
+}
+
+.css-jija50{
+  width: 100%;
+  height: 3px;
+  background: rgb(83, 65, 255);
+  position: fixed;
+  display: inline-block;
+  will-change: transform;
+  top: 70px;
+  z-index: 2;
+  transition: transform 1s cubic-bezier(0.46, 0.06, 0.26, 1.01) 0s;
 }
 
 
