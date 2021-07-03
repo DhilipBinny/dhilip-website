@@ -2,9 +2,9 @@
     flex: 1 1 auto;
 }
 
-.mat-sidenav-container {
-    min-height: 92vh !important;
-}
+/*.mat-sidenav-container {*/
+/*  height: calc(100% - 70px) !important;*/
+/*}*/
 
 a {
     text-decoration: none;
@@ -20,18 +20,34 @@ button {
     /* background: #fff; */
     /* height: 8vh; */
   /*background:url('https://s3-us-west-2.amazonaws.com/webgradients.com/img/other/bg-banner@2x.jpg') no-repeat 50% / cover*/
-  display: flex;
-  white-space: nowrap;
-  overflow: hidden;
+  /*display: flex;*/
+  /*white-space: nowrap;*/
+  /*overflow: hidden;*/
   /*background-image: linear-gradient(to bottom, rgb(237, 237, 237), rgb(222, 222, 222));*/
   /*background-image: radial-gradient( circle farthest-corner at 16.5% 28.1%,  rgba(15,27,49,1) 0%, rgba(0,112,218,1) 90% );*/
-  background: linear-gradient(to bottom, #D5DEE7 0%, #E8EBF2 50%, #E2E7ED 100%), linear-gradient(to bottom, rgba(0,0,0,0.02) 50%, rgba(255,255,255,0.02) 61%, rgba(0,0,0,0.02) 73%), linear-gradient(33deg, rgba(255,255,255,0.20) 0%, rgba(0,0,0,0.20) 100%);
-  background-blend-mode: normal,color-burn;
-  box-shadow: inset rgba(255, 255, 255, 0.5) 0 1px 1px;
-  outline: none;
-  padding-top: 3px;
-  padding-bottom: 3px;
-  /*height: 50px;*/
+  /*backgroundground: linear-gradient(to bottom, #D5DEE7 0%, #E8EBF2 50%, #E2E7ED 100%), linear-gradient(to bottom, rgba(0,0,0,0.02) 50%, rgba(255,255,255,0.02) 61%, rgba(0,0,0,0.02) 73%), linear-gradient(33deg, rgba(255,255,255,0.20) 0%, rgba(0,0,0,0.20) 100%);*/
+  /*background-blend-mode: normal,color-burn;*/
+  /*box-shadow: inset rgba(255, 255, 255, 0.5) 0 1px 1px;*/
+  /*outline: none;*/
+  /*padding-top: 3px;*/
+  /*padding-bottom: 3px;*/
+  height: 50px;
+  position: fixed;
+  top: 0px;
+  left: 0px;
+  width: 100%;
+  /*height: 70px;*/
+  padding: 0px 20px;
+  z-index: 110;
+  -webkit-box-pack: justify;
+  justify-content: space-between;
+  flex-direction: row;
+  display: flex;
+  -webkit-box-align: center;
+  align-items: center;
+  backdrop-filter: saturate(180%) blur(20px);
+  background-color: rgba(255, 255, 255, 0.85);
+  box-shadow: rgb(0 0 0.2%) 0px 1px 0px 0px;
 }
 
 footer {
@@ -57,6 +73,19 @@ footer {
 
 }
 
+.example-side-nav{
+  transition: all 500ms cubic-bezier(0.45, 0.01, 0.04, 0.98) 0s;
+  will-change: transform;
+  width: 35%;
+  top: 60px;
+  height: calc(100% - 70px);
+  overflow: hidden;
+  border-radius: 10px;
+  background: rgb(255, 255, 255);
+  position: fixed;
+  left: 10px;
+  transform: translateX(-10px);
+}
 .css-jija50{
   width: 100%;
   height: 3px;

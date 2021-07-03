@@ -18,17 +18,19 @@
     </div>
 </mat-toolbar>
 
-<mat-sidenav-container fxFlexFill class="example-container">
+<mat-sidenav-container  class="example-container">
   <div class="css-jija50" style="transform: translateX(-60%);"></div>
-    <mat-sidenav style="width: 30%;" color="primary" #sidenav fxLayout="column" mode="over" opened="false" fxHide.gt-sm="true">
-        <div fxLayout="column">
-            <button mat-button (click)="sidenav.toggle()" routerLink="/about">About</button>
-            <button mat-button (click)="sidenav.toggle()" routerLink="/projects">Projects</button>
-            <button mat-button (click)="sidenav.toggle()" routerLink="/certificates">Certification</button>
-<!--            <button mat-button (click)="sidenav.toggle()" routerLink="/chatbots">Chatbots</button>-->
-            <button mat-button [matMenuTriggerFor]="menuresume">CV</button>
-        </div>
+    <mat-sidenav class="example-side-nav" color="primary" #sidenav >
+      <!--                 fxLayout="column" mode="over" opened="false" fxHide.gt-sm="true"-->
+      <div fxLayout="column">
+        <button mat-button (click)="sidenav.toggle()" routerLink="/about">About</button>
+        <button mat-button (click)="sidenav.toggle()" routerLink="/projects">Projects</button>
+        <button mat-button (click)="sidenav.toggle()" routerLink="/certificates">Certification</button>
+        <!--            <button mat-button (click)="sidenav.toggle()" routerLink="/chatbots">Chatbots</button>-->
+        <button mat-button [matMenuTriggerFor]="menuresume">CV</button>
+      </div>
     </mat-sidenav>
+
     <mat-sidenav-content fxFlexFill>
         <!-- <div style="margin-bottom: 7vh;"> -->
         <router-outlet></router-outlet>
